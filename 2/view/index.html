@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>用户系统</title>
+    </head>
+    <body>
+        <div>
+            <h4>用户系统</h4>
+            <ul>
+                <?php if(!isset($user)){?>
+                <li><a href="user.php?action=login">登录</a></li>
+                <li><a href="user.php?action=reg">注册</a></li>
+                <?php } else {?>
+                <li><a href="user.php?action=logout">注销</a></li>
+                <li><a href="thread_create.php">发帖</a></li>
+                <?php }?>
+            </ul>
+        </div>
+    </body>
+</html>
