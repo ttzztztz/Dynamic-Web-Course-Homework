@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>作业三</title>
+    <title>作业三 - 杨子越 课程设计 U201816816</title>
   </head>
   <body>
-    <div id="myCanvasBox" style="height: 600px;"></div>
-
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <div id="myCanvasBox" style="height: 600px; width: 100%;"></div>
+  </body>
+  <footer>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="./k.js"></script>
     <script>
       const type = 5;
@@ -60,5 +61,5 @@
 
       renderHistoryData();
     </script>
-  </body>
+  </footer>
 </html>

@@ -2,13 +2,13 @@
 function user_create($username, $password)
 {
     global $db;
-    $_user = $db->select("bbs_user", "*", array(
+    $_user = $db->select("user", "*", array(
         "username" => $username
     ));
 
     if (count($_user) > 0) return -1;
     $password_md5 = md5($password);
-    $r = $db->insert("bbs_user", array(
+    $r = $db->insert("user", array(
         "username" => $username,
         "password" => $password_md5
     ));
@@ -21,7 +21,7 @@ function user_create($username, $password)
 function user_login($username, $password)
 {
     global $db, $user;
-    $_user_db = $db->select("bbs_user", "*", array(
+    $_user_db = $db->select("user", "*", array(
         "username" => $username
     ));
     if (count($_user_db) <= 0) return -1;
@@ -38,7 +38,7 @@ function user_login($username, $password)
 function user_read($uid)
 {
     global $db;
-    $_user_db = $db->select("bbs_user", "*", array(
+    $_user_db = $db->select("user", "*", array(
         "uid" => $uid
     ));
     if (count($_user_db) <= 0) return -1;
